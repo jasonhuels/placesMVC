@@ -1,0 +1,27 @@
+@using Places.Models;
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Places...</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="~/styles.css">
+    </head>
+    <body>
+        <h1>Welcome to another place you've been (you can add this URL to your list...)</h1>
+        <!--Places loop here-->
+        @if (Model.Count == 0)
+        {
+            <p>Yous ain't been nowheres bud...</p>
+        }
+        else
+        {
+        <ul>
+            @foreach (Place place in Model)
+            {        
+                <li>@place.CityName</li>
+            }
+        </ul>
+        }
+
+    </body>
+</html>
